@@ -1,7 +1,7 @@
 package Biblioteca;
 
 public class CompraPrestamoLibro extends Libro{
-    String Nombre, DNI, Apellidos;
+    String NombreCliente, DNI, ApellidosCliente;
     double monto;
 
     public CompraPrestamoLibro()
@@ -10,8 +10,8 @@ public class CompraPrestamoLibro extends Libro{
     public CompraPrestamoLibro(String Nombre, String Apellidos, String DNI, double monto)
     {
         super();
-        this.Nombre = Nombre;
-        this.Apellidos = Apellidos;
+        this.NombreCliente = Nombre;
+        this.ApellidosCliente = Apellidos;
         this.DNI = DNI;
         this.monto = monto;
 
