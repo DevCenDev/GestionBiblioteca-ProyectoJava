@@ -2,16 +2,36 @@ package Biblioteca;
 
 public class Libro {
     String Nombre, Genero, Autor, Editorial;
-    public Libro(String Nombre, String Genero, String Autor, String Editorial)
-    {
-        this.Nombre = Nombre;
-        this.Autor = Autor;
-        this.Genero = Genero;
-        this.Editorial = Editorial;
+
+    public String getNombre() {
+        return Nombre;
     }
-    public Libro()
-    {}
 
+    public void setNombre(String nombre) {
+        Nombre = nombre;
+    }
 
+    public String getGenero() {
+        return Genero;
+    }
 
+    public void setGenero(String genero) {
+        Genero = genero;
+    }
+
+    public String getAutor() {
+        return Autor;
+    }
+
+    public void setAutor(String autor) {
+        Autor = autor;
+    }
+
+    public String getEditorial() {
+        return Editorial;
+    }
+
+    public void setEditorial(String editorial) {
+        Editorial = editorial;
+    }
 }

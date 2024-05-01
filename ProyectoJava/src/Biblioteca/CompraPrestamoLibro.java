@@ -1,21 +1,22 @@
 package Biblioteca;
 
-public class CompraPrestamoLibro extends Libro{
+public class CompraPrestamoLibro{
     String NombreCliente, DNI, ApellidosCliente;
     double monto;
 
     public CompraPrestamoLibro()
     {
     }
-    public CompraPrestamoLibro(String Nombre, String Apellidos, String DNI, double monto)
+
+    public CompraPrestamoLibro(Libro libro)
     {
-        super();
-        this.NombreCliente = Nombre;
-        this.ApellidosCliente = Apellidos;
-        this.DNI = DNI;
-        this.monto = monto;
+        libro = new Libro();
 
     }
+
+
+
+
 
 
 }
