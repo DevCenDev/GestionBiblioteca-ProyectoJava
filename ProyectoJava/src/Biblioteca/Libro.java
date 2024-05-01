@@ -1,37 +1,28 @@
 package Biblioteca;
 
+
 public class Libro {
     String Nombre, Genero, Autor, Editorial;
 
-    public String getNombre() {
-        return Nombre;
+    public Libro(String nombre, String genero, String autor, String editorial)
+    {
+        this.Nombre = nombre;
+        this.Genero = genero;
+        this.Autor = autor;
+        this.Editorial = editorial;
+    }
+    public Libro()
+    {}
+
+    @Override
+    public String toString() {
+        return "Libro{" +
+                "Nombre='" + Nombre + '\'' +
+                ", Genero='" + Genero + '\'' +
+                ", Autor='" + Autor + '\'' +
+                ", Editorial='" + Editorial + '\'' +
+                '}';
     }
 
-    public void setNombre(String nombre) {
-        Nombre = nombre;
-    }
 
-    public String getGenero() {
-        return Genero;
-    }
-
-    public void setGenero(String genero) {
-        Genero = genero;
-    }
-
-    public String getAutor() {
-        return Autor;
-    }
-
-    public void setAutor(String autor) {
-        Autor = autor;
-    }
-
-    public String getEditorial() {
-        return Editorial;
-    }
-
-    public void setEditorial(String editorial) {
-        Editorial = editorial;
-    }
 }
