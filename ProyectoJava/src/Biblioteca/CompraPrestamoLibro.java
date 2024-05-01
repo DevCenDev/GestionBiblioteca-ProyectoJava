@@ -9,7 +9,7 @@ public class CompraPrestamoLibro{
 
     public CompraPrestamoLibro()
     {
-        listaLibros = new ArrayList<>();
+        listaLibros = new ArrayList<Libro>();
     }
 
     @Override

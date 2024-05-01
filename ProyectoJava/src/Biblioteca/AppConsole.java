@@ -5,9 +5,5 @@ public class AppConsole {
         CompraPrestamoLibro compra01 = new CompraPrestamoLibro();
         System.out.println(compra01);
 
-
-
-
-
     }
 }
