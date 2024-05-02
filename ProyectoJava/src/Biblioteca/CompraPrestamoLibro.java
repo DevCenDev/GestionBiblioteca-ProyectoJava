@@ -1,10 +1,8 @@
 package Biblioteca;
 
-import java.util.ArrayList;
 
 public class CompraPrestamoLibro{
     String NombreCliente, DNI, ApellidosCliente;
-    double monto;
 
 
 
@@ -13,8 +11,7 @@ public class CompraPrestamoLibro{
         return "CompraPrestamoLibro{" +
                 "NombreCliente='" + NombreCliente + '\'' +
                 ", DNI='" + DNI + '\'' +
-                ", ApellidosCliente='" + ApellidosCliente + '\'' +
-                ", monto=" + monto;
+                ", ApellidosCliente='" + ApellidosCliente;
     }
 
 }
