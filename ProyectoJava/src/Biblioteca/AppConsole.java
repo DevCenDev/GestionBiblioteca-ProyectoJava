@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class AppConsole {
     public static void main(String[] args) {
-        int menu, rImpTicket, rOtraVenta;
-        String nombreCliente = "", apellidosCliente = "", dni = "", imprimirTicket;
+        int menu, rOtraVenta;
+        String nombreCliente, apellidosCliente, dni, imprimirTicket, ImpTicket;
         Libro libro01 = new Libro();
         GeneradorTickets ticket = new GeneradorTickets();
 
@@ -23,27 +23,28 @@ public class AppConsole {
         switch (menu) {
             case 1:
                 do {
-                    System.out.println("Nombre del cliente: ");
+                    System.out.print("Nombre del cliente: ");
                     nombreCliente = sc.nextLine();
-                    System.out.println("Apellidos del cliente: ");
+                    System.out.print("Apellidos del cliente: ");
                     apellidosCliente = sc.nextLine();
-                    System.out.println("DNI: ");
+                    System.out.print("DNI: ");
                     dni = sc.nextLine();
 
-                    System.out.println("¿Desea imprimir el ticket?");
-                    System.out.println("1. SI");
-                    System.out.println("2. NO");
-                    rImpTicket = sc.nextInt();
-                    sc.nextLine();
+                    System.out.print("¿Deseas imprimir el ticket? (S/N) ");
 
-                    if (rImpTicket == 1) {
+                    ImpTicket = sc.nextLine();
+
+                    if (ImpTicket.equalsIgnoreCase("S")) {
                         imprimirTicket = ticket.crearTicket("001", "MI BIBLIOTECA", nombreCliente, apellidosCliente,
                                 dni);
                         System.out.println(imprimirTicket);
-                    } else {
-                        System.out.println("Gracias por su preferencia");
-                        break;
+                    } else if (ImpTicket.equalsIgnoreCase("N")) {
+                        System.out.println("Gracias por la preferencia.");
                     }
+                    else {
+                        System.out.println("Elija una opcion correcta.");
+                    }
+
 
                     System.out.println("¿Desea realizar otra venta?");
                     System.out.println("1. SI");
