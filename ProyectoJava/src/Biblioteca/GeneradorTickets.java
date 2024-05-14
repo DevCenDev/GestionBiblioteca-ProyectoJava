@@ -10,7 +10,7 @@ public class GeneradorTickets {
     public GeneradorTickets() {
     }
 
-    public String crearTicket(String ID, String razonSocial, String NombreCliente, String Apellidos, String DNI) {
+    public String crearTicket(String nOperacion, String razonSocial, String NombreCliente, String Apellidos, String DNI) {
         // Formatear la fecha y la hora en un formato específico
         SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
         SimpleDateFormat formatoHora = new SimpleDateFormat("HH:mm:ss");
@@ -22,7 +22,7 @@ public class GeneradorTickets {
         // Construir el ticket formateado
         StringBuilder ticket = new StringBuilder();
         ticket.append("=============================================\n");
-        ticket.append("ID: " + ID + "\n");
+        ticket.append("N° operacion: " + nOperacion + "\n");
         ticket.append("Razon Social: " + razonSocial + "\n");
         ticket.append("FECHA: " + FECHA + "\n");
         ticket.append("HORA: " + HORA + "\n");
@@ -33,14 +33,7 @@ public class GeneradorTickets {
 
         ticket.append("\n");
         ticket.append("Productos: \n");
-
-        // bucle for para los productos
-        ticket.append(String.format(FORMATO, "CANT.", "DESCRIPCION", "IMPORTE"));
-        ticket.append(String.format(FORMATO, "1", limitarLongitud("Los 3 cerditos"), "$25.90"));
-        ticket.append(String.format(FORMATO, "2", limitarLongitud("Los gallinazos sin plumas"), "$100.00"));
-        //
         ticket.append("\n");
-        ticket.append(String.format("%43s", "TOTAL $225.90"));
         ticket.append("\n");
 
         ticket.append("Gracias por su compra!\n");

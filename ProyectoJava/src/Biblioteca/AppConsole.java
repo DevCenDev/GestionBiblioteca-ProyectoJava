@@ -8,6 +8,7 @@ public class AppConsole {
         Scanner sc = new Scanner(System.in);
         CompraPrestamoLibro venderLibros = new CompraPrestamoLibro();
 
+
         System.out.print("""
                 BIENVENIDO A MI BIBLIOTECA:
                 1. VENDER LIBROS

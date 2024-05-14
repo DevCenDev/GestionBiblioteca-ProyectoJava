@@ -34,7 +34,10 @@ public class CompraPrestamoLibro{
         ImpTicket = sc.nextLine();
 
         if (ImpTicket.equalsIgnoreCase("S")) {
-            imprimirTicket = ticket.crearTicket("001", "MI BIBLIOTECA", nombreCliente, apellidosCliente,
+            int aux = 1;
+            String nOp = String.valueOf(aux);
+
+            imprimirTicket = ticket.crearTicket(nOp, "MI BIBLIOTECA", nombreCliente, apellidosCliente,
                     dni);
             System.out.println(imprimirTicket);
         } else if (ImpTicket.equalsIgnoreCase("N")) {
@@ -48,7 +51,7 @@ public class CompraPrestamoLibro{
         System.out.println("¿Desea realizar otra venta?");
         System.out.println("1. SI");
         System.out.println("2. NO");
-        System.out.println("3. Volver al menu principal");
+        System.out.println("3. Cerrar");
         OtraVenta = sc.nextInt();
     }
 
